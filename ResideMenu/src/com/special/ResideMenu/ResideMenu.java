@@ -217,6 +217,9 @@ public class ResideMenu extends FrameLayout {
         imageViewBackground.setImageResource(imageResource);
     }
 
+    public void setBackground(String url) {
+        Picasso.with(getContext()).load(url).into(imageViewBackground);
+    }
     /**
      * The visibility of the shadow under the activity;
      *
