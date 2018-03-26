@@ -38,6 +38,12 @@ public class ResideMenuItem extends LinearLayout{
         iv_icon.setImageResource(icon);
         tv_title.setText(title);
     }
+    public ResideMenuItem(Context context, String url, String title) {
+        super(context);
+        initViews(context);
+        Picasso.with(context).load(url).into(iv_icon);
+        tv_title.setText(title);
+    }
 
     private void initViews(Context context){
         LayoutInflater inflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
